@@ -1,0 +1,160 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/*div{
+	border: 2px solid #000;
+}*/
+.container{
+	display:grid;
+	grid-template: repeat(5,auto)/ repeat(4,auto);
+	grid-gap: 10px;
+	grid-template-areas:  'logo logo logo rectangulo'
+						  "textarea textarea textarea rectangulo" 
+						  "textarea textarea textarea rectangulo"
+						  "regla regla regla rectangulo" 
+						  "botones botones botones rectangulo";
+height: 100vh;
+padding: 30px;
+background: #F3F5FC;
+}
+.logo{
+	grid-area: logo;
+	scale: 20px;
+	
+}
+.textarea{
+
+	grid-area: textarea;
+	display: flex;
+}
+#msj{
+	background: #F3F5FC;
+	border: none;
+	font-size: 2em;
+}
+.regla{
+	grid-area: regla;
+	display: flex;
+	align-items: flex-end;
+
+}
+
+.regla p{
+	display: inline-block;
+}
+.botones{
+	grid-area: botones;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 20px;
+}
+.botones button:first-child{
+	background: #fc3d04;
+	color: rgb(12, 131, 201);
+}
+.btn{
+	background: #D8DFE8;
+	color: rgb(46, 45, 45);
+	padding: 24px;
+	width: 80%;
+	height: 67px;
+	line-height: 0;
+	border: none;
+	border-radius: 25px;
+	font-size: 24px;
+	box-shadow: 0px 5px 5px rgb(66, 11, 11);
+	position: relative;
+}
+.btn:active{
+	transform: translate(0px ,5px);
+	box-shadow: 0 0 0;
+}
+.rectangulo{
+	background: rgb(157, 202, 238);
+	width: 100%;
+	min-width: 250px;
+	grid-area: rectangulo;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	border: 2px solid rgb(70, 5, 5);
+	border-radius: 25px;
+	box-shadow: 5px 5px 5px rgb(51, 5, 5);
+}
+.rectangulo img{
+	
+	width: 50%;
+}
+.aviso{
+	font-size: 1.3em;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.aviso p:first-child{
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+.txtcel{
+	word-break: break-word;
+	align-self: flex-start;
+	margin-top: 10px;
+	font-size: 1.5em;
+	position: relative;
+	bottom:70px;
+}
+.btnrespon{
+	border: none;
+	width: 80%;
+	position: relative;
+	top: 20%;
+}
+.hidden{
+	display: none;
+}
+.static{
+	display: block;
+}
+
+@media screen and (max-width:768px){
+	.container{
+	grid-template: repeat(5,auto)/ repeat(4,auto);
+	grid-gap: 10px;
+	grid-template-areas:  'logo logo logo logo'
+						  "textarea textarea textarea textarea" 
+						  "regla regla regla regla" 
+						  "botones botones botones botones"
+						  "rectangulo rectangulo rectangulo rectangulo";
+	
+	height: auto;
+	
+	}
+	.textarea{
+		height: 200px;
+	}
+	.rectangulo img{
+		display: none;
+	}
+	.aviso{
+		margin-top:20px;
+	}
+	.txtcel{
+		position: relative;
+    	bottom: 50px;
+		padding: 30px 10px;
+	}
+	.btnrespon{
+		position: static;
+		width: 100%;
+	}
+
+}
+@media screen and (max-width:375px){
+	.botones{
+		flex-direction: column;
+		gap: 20px;
+	}
+}
