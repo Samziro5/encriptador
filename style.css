@@ -18,16 +18,50 @@
 height: 100vh;
 padding: 30px;
 background: #F3F5FC;
+
+}
+img {
+	height: auto;
+	width: auto;
+	max-height: 500px;
+	max-width: 500px;
+}
+.img1{
+	position: absolute;
+	top: 10px;
+	left: 0px;
+}
+.img2{
+	height: auto;
+	width: auto;
+	max-height: 500px;
+	max-width: 500px;
+	
+
 }
 .logo{
 	grid-area: logo;
-	scale: 20px;
+	scale: 5em;
+	
+
 	
 }
 .textarea{
+    
+	position: absolute;
+width: 100px;
+height: 25px;
+left: 150px;
+top: 500px;
 
-	grid-area: textarea;
-	display: flex;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 25%;
+	
+	
+	
 }
 #msj{
 	background: #F3F5FC;
@@ -87,7 +121,9 @@ background: #F3F5FC;
 }
 .rectangulo img{
 	
-	width: 50%;
+	height: auto;
+	width: auto;
+	
 }
 .aviso{
 	font-size: 1.3em;
